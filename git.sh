@@ -31,12 +31,10 @@ if cd ../${project}/${folder}; then
     git remote set-branches origin ${branch} ${branch}*
     git pull origin ${branch}
     git pull origin ${branch}-${branchSuffix}
-    cd ../dev-tools
 else
     cd ../${project}
     git clone --branch ${branch} --single-branch ${repository} ./${folder}
     cd ${folder}
     git branch ${branch}-${branchSuffix}
     git checkout ${branch}-${branchSuffix}
-    cd ../dev-tools
 fi
