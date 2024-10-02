@@ -35,6 +35,7 @@ else
     cd ../${project}
     git clone --branch ${branch} --single-branch ${repository} ./${folder}
     cd ${folder}
+    git remote set-branches origin ${branch} ${branch}*
     git branch ${branch}-${branchSuffix}
     git checkout ${branch}-${branchSuffix}
 fi
